@@ -7,6 +7,25 @@
     <script type="module" src="main.js" defer></script>
 </head>
 <body>
-    
+    <h2>Form</h2>
+    <form>
+        <input type="number" name="money" placeholder="Ingrese el valor">
+        <input type="radio" id="uno" name="opcion" value="Ingreso"><label for="uno">Ingreso</label>
+        <input type="radio" id="dos" name="opcion" value="Gasto"><label for="dos">Gasto</label>
+        <input type="submit" value="Calculo">
+    </form>
+    <h2>Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>valor</th>
+                <th>tipo</th>
+            </tr>
+        </thead>
+        <tbody id="datos">
+
+        </tbody>
+    </table>
 </body>
 </html>
