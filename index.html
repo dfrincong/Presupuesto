@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presupuesto</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
     <script type="module" src="main.js" defer></script>
 </head>
 <body>
-    <h2>Form</h2>
-    <form id="formulario">
-        <input type="number" name="money" placeholder="Ingrese el valor">
-        <input type="radio" id="uno" name="opcion" value="Ingreso"><label for="uno">Ingreso</label>
-        <input type="radio" id="dos" name="opcion" value="Gasto"><label for="dos">Gasto</label>
-        <input type="submit" value="Enviar">
-    </form>
+    <div class="center">
+        <h2>Form</h2>
+        <form id="formulario">
+            <input type="number" name="money" placeholder="Ingrese el valor">
+            <div>
+                <input type="radio" id="uno" name="opcion" value="Ingreso"><label for="uno">Ingreso</label>
+                <input type="radio" id="dos" name="opcion" value="Gasto"><label for="dos">Gasto</label>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 
     <dialog>
         <h2>EditForm</h2>
@@ -25,20 +31,22 @@
         </form>
     </dialog>
 
-    <h2>Table</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Valor</th>
-                <th>Tipo</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-        </thead>
-        <tbody id="datos">
+    <div class="center">
+        <h2>Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="end">Id</th>
+                    <th class="end">Valor</th>
+                    <th>Tipo</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="datos">
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
