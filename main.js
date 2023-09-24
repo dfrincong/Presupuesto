@@ -31,6 +31,26 @@ const eliminarDato = async(id)=>{
     location.reload();
   };
 
+// editar
+const dialog = document.querySelector("dialog");
+const editarFormulario = document.querySelector("#formularioEdit");
+
+const editarDato = (id)=>{
+    editarFormulario.addEventListener("submit", async(e)=>{
+        e.preventDefault();
+        let fila = Object.fromEntries(new FormData(e.target));
+        let config = {
+            method: "PUT",
+            headers: {"content-type":"application/json"},
+            body: JSON.stringify(fila)
+        };
+        let resp = await (await fetch(url + `/${id}`, config)).json();
+        // console.log(resp);
+        dialog.close();
+        location.reload();
+    })
+};
+
 // la tabla
 addEventListener("DOMContentLoaded", async(e)=>{
     const table = document.querySelector("#datos");
@@ -59,6 +79,16 @@ addEventListener("DOMContentLoaded", async(e)=>{
         // console.log(dato);
         dato.addEventListener("click", ()=>{
             eliminarDato(dato.id);
+        });
+    });
+
+    const botonEditar = document.querySelectorAll(".editar");
+    console.log(botonEditar);
+    botonEditar.forEach(dato=>{
+        // console.log(dato);
+        dato.addEventListener("click", ()=>{
+            dialog.showModal();
+            editarDato(dato.id);
         });
     });
 });
