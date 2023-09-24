@@ -34,7 +34,6 @@ const eliminarDato = async(id)=>{
 // editar
 const dialog = document.querySelector("dialog");
 const editarFormulario = document.querySelector("#formularioEdit");
-
 const editarDato = (id)=>{
     editarFormulario.addEventListener("submit", async(e)=>{
         e.preventDefault();
@@ -92,5 +91,3 @@ addEventListener("DOMContentLoaded", async(e)=>{
         });
     });
 });
-
-
