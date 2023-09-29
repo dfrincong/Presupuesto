@@ -51,6 +51,11 @@ addEventListener("DOMContentLoaded", async(e)=>{
     const table = document.querySelector("#datos");
     let resp = await (await fetch(url)).json();
     // console.log(resp);
+    table.innerHTML = "";
+
+    let totalIngresos = 0;
+    let totalGastos = 0;
+
     resp.map(dato=>{
         // console.log(dato);
         table.insertAdjacentHTML("beforeend",`
@@ -70,7 +75,26 @@ addEventListener("DOMContentLoaded", async(e)=>{
             </td>
         </tr>
         `);
+        if (dato.opcion === "Ingreso") {
+            totalIngresos += parseFloat(dato.money);
+          } else {
+            totalGastos += parseFloat(dato.money);
+          }
     });
+    const total = totalIngresos - totalGastos;
+
+    document.querySelector("#ingreso").textContent = totalIngresos.toLocaleString("en-CO", {
+        style: "currency",
+        currency: "COP"
+      });
+    document.querySelector("#gasto").textContent = totalGastos.toLocaleString("en-CO", {
+        style: "currency",
+        currency: "COP"
+      });
+    document.querySelector("#total").textContent = total.toLocaleString("en-CO", {
+        style: "currency",
+        currency: "COP"
+      });
 
     const botonEliminar = document.querySelectorAll(".eliminar");
     console.log(botonEliminar);
