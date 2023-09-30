@@ -1,7 +1,6 @@
-// funcionalidades
 const url = "https://650ee92e54d18aabfe999cc6.mockapi.io/table";
 
-//enviar
+//enviar datos
 const formulario = document.querySelector("#formulario");
 formulario.addEventListener("submit",async(e)=>{
     e.preventDefault();
@@ -16,7 +15,7 @@ formulario.addEventListener("submit",async(e)=>{
     location.reload();
 });
 
-// eliminar
+// eliminar datos
 const eliminarDato = async(id)=>{
     let config = {
       method: "DELETE",
@@ -27,7 +26,7 @@ const eliminarDato = async(id)=>{
     location.reload();
   };
 
-// editar
+// editar datos
 const dialog = document.querySelector("dialog");
 const editarFormulario = document.querySelector("#formularioEdit");
 const editarDato = (id)=>{
@@ -46,7 +45,7 @@ const editarDato = (id)=>{
     })
 };
 
-// la tabla
+// tabla y estado de cuentas
 addEventListener("DOMContentLoaded", async(e)=>{
     const table = document.querySelector("#datos");
     let resp = await (await fetch(url)).json();
