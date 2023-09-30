@@ -1,4 +1,4 @@
-const url = "https://650ee92e54d18aabfe999cc6.mockapi.io/table";
+const url = "http://127.0.0.2:5010/table";
 
 //enviar datos
 const formulario = document.querySelector("#formulario");

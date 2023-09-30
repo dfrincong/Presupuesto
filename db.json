@@ -1,3 +1,14 @@
 {
-    "table": []
+  "table": [
+    {
+      "money": "56000",
+      "opcion": "Ingreso",
+      "id": 1
+    },
+    {
+      "money": "23400",
+      "opcion": "Gasto",
+      "id": 2
+    }
+  ]
 }
