@@ -1,0 +1,16 @@
+{
+  "name": "presupuesto",
+  "version": "1.0.0",
+  "description": "Presupuesto es una página interactiva que permite visualizar el estado de las cuentas, teniendo en cuenta los ingresos, los gastos y si el saldo es positivo o negativo. Para poder realizarlo primero se deben registrar el valor y el tipo de transacción (ingreso o gasto) en un formulario, los cuales se visualizaran en una tabla donde se observará: (id, valor, el tipo de transacción, un botón de edición y un botón de eliminación). Con el botón de edición se podrá editar el valor y el tipo de la fila seleccionada y ccon el botón de eliminación se eliminará la fila seleccionada.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "json-server --watch db.json --port 5010 --host 127.0.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "0.17.4"
+  }
+}
